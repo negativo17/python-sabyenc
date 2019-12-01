@@ -39,8 +39,8 @@ CFLAGS="%{optflags}" %py2_build
 %install
 %py2_install
 
-%files
-%doc PKG-INFO
+%files -n python2-%{srcname}
+%doc README.md
 %{python2_sitearch}/%{srcname}.so
 %{python2_sitearch}/%{srcname}-%{version}-*.egg-info
 
