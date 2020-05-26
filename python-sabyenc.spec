@@ -13,18 +13,22 @@ BuildRequires:  python3-pytest
 
 %description
 The module was extended to do header parsing and full yEnc decoding from a
-Python list of chunks, the way in which data is retrieved from usenet. This is
+Python list of chunks, the way in which data is retrieved from Usenet. This is
 particularly beneficial when SSL is enabled, which limits the size of each chunk
 to 16K. Parsing these chunks in python is much more costly. Additionally, this
 module releases Python's GIL during decoding, greatly increasing performance of
 the overall download process.
 
-
 %package -n     python3-sabyenc
 Summary:        SABYenc 3 - yEnc Decoding for Python 3
 
 %description -n python3-sabyenc
-%{description}
+The module was extended to do header parsing and full yEnc decoding from a
+Python list of chunks, the way in which data is retrieved from Usenet. This is
+particularly beneficial when SSL is enabled, which limits the size of each chunk
+to 16K. Parsing these chunks in python is much more costly. Additionally, this
+module releases Python's GIL during decoding, greatly increasing performance of
+the overall download process.
 
 %prep
 %autosetup -n sabyenc-%{version}
