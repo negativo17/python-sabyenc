@@ -1,5 +1,5 @@
 Name:           python-sabyenc
-Version:        4.0.1
+Version:        4.0.2
 Release:        1%{?dist}
 Summary:        SABYenc 3 - yEnc Decoding for Python 3
 License:        LGPLv3
@@ -51,6 +51,9 @@ CFLAGS="%{optflags}" %{__python3} setup.py build
 %{python3_sitearch}/*
 
 %changelog
+* Tue Jul 14 2020 Simone Caronni <negativo17@gmail.com> - 4.0.2-1
+- Update to 4.0.2.
+
 * Tue May 26 2020 Simone Caronni <negativo17@gmail.com> - 4.0.1-1
 - Update to 4.0.1.
 
