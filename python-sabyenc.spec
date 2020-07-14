@@ -9,7 +9,6 @@ Source0:        https://github.com/sabnzbd/sabyenc/archive/v%{version}.tar.gz#/s
 
 BuildRequires:  gcc
 BuildRequires:  python3-devel
-BuildRequires:  python3-pytest
 
 %description
 The module was extended to do header parsing and full yEnc decoding from a
