@@ -1,6 +1,6 @@
 Name:           python-sabyenc
 Version:        4.0.2
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        SABYenc 3 - yEnc Decoding for Python 3
 License:        LGPLv3
 
@@ -9,6 +9,7 @@ Source0:        https://github.com/sabnzbd/sabyenc/archive/v%{version}.tar.gz#/s
 
 BuildRequires:  gcc
 BuildRequires:  python3-devel
+BuildRequires:  python3-setuptools
 
 %description
 The module was extended to do header parsing and full yEnc decoding from a
@@ -50,6 +51,9 @@ CFLAGS="%{optflags}" %{__python3} setup.py build
 %{python3_sitearch}/*
 
 %changelog
+* Wed Sep 22 2021 Fabio Valentini <decathorpe@gmail.com> - 4.0.2-2
+- Add BR: python3-setuptools to fix build on Fedora 35+.
+
 * Tue Jul 14 2020 Simone Caronni <negativo17@gmail.com> - 4.0.2-1
 - Update to 4.0.2.
 
