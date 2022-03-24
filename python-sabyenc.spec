@@ -1,15 +1,15 @@
 %global real_name sabyenc
 
 Name:           python-%{real_name}
-Version:        4.0.2
-Release:        3%{?dist}
+Version:        5.1.3
+Release:        1%{?dist}
 Summary:        %{real_name} 3 - yEnc Decoding for Python 3
 License:        LGPLv3
 
 URL:            https://github.com/sabnzbd/%{real_name}/
 Source0:        https://github.com/sabnzbd/%{real_name}/archive/v%{version}.tar.gz#/%{real_name}-%{version}.tar.gz
 
-BuildRequires:  gcc
+BuildRequires:  gcc-c++
 BuildRequires:  python3-devel
 
 %global _description %{expand:
@@ -47,6 +47,9 @@ Summary:        %{summary}
 %doc README.md
 
 %changelog
+* Thu Mar 24 2022 Simone Caronni <negativo17@gmail.com> - 5.1.3-1
+- Update to 5.1.3.
+
 * Mon Sep 27 2021 Simone Caronni <negativo17@gmail.com> - 4.0.2-3
 - Update SPEC file for recent package guidelines.
 
