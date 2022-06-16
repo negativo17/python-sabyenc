@@ -1,7 +1,7 @@
 %global real_name sabyenc
 
 Name:           python-%{real_name}
-Version:        5.1.3
+Version:        5.4.3
 Release:        1%{?dist}
 Summary:        %{real_name} 3 - yEnc Decoding for Python 3
 License:        LGPLv3
@@ -47,6 +47,9 @@ Summary:        %{summary}
 %doc README.md
 
 %changelog
+* Thu Jun 16 2022 Simone Caronni <negativo17@gmail.com> - 5.4.3-1
+- Update to 5.4.3.
+
 * Thu Mar 24 2022 Simone Caronni <negativo17@gmail.com> - 5.1.3-1
 - Update to 5.1.3.
 
