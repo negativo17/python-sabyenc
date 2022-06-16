@@ -1,11 +1,13 @@
-Name:           python-sabyenc
-Version:        4.0.2
-Release:        2%{?dist}
-Summary:        SABYenc 3 - yEnc Decoding for Python 3
+%global real_name sabyenc
+
+Name:           python-%{real_name}
+Version:        5.4.3
+Release:        1%{?dist}
+Summary:        %{real_name} 3 - yEnc Decoding for Python 3
 License:        LGPLv3
 
-URL:            https://github.com/sabnzbd/sabyenc/
-Source0:        https://github.com/sabnzbd/sabyenc/archive/v%{version}.tar.gz#/sabyenc-%{version}.tar.gz
+URL:            https://github.com/sabnzbd/%{real_name}/
+Source0:        https://github.com/sabnzbd/%{real_name}/archive/v%{version}.tar.gz#/%{real_name}-%{version}.tar.gz
 
 BuildRequires:  gcc
 BuildRequires:  python3-devel
@@ -19,10 +21,10 @@ to 16K. Parsing these chunks in python is much more costly. Additionally, this
 module releases Python's GIL during decoding, greatly increasing performance of
 the overall download process.
 
-%package -n     python3-sabyenc
-Summary:        SABYenc 3 - yEnc Decoding for Python 3
+%package -n     python3-%{real_name}
+Summary:        %{real_name} 3 - yEnc Decoding for Python 3
 
-%description -n python3-sabyenc
+%description -n python3-%{real_name}
 The module was extended to do header parsing and full yEnc decoding from a
 Python list of chunks, the way in which data is retrieved from Usenet. This is
 particularly beneficial when SSL is enabled, which limits the size of each chunk
@@ -31,7 +33,7 @@ module releases Python's GIL during decoding, greatly increasing performance of
 the overall download process.
 
 %prep
-%autosetup -n sabyenc-%{version}
+%autosetup -n %{real_name}-%{version}
 
 %build
 # Remove CFLAGS=... for noarch packages (unneeded)
@@ -44,13 +46,15 @@ CFLAGS="%{optflags}" %{__python3} setup.py build
 #check
 #{__python3} setup.py test
 
-
-%files -n       python3-sabyenc
+%files -n       python3-%{real_name}
 %license LICENSE.md
 %doc README.md
 %{python3_sitearch}/*
 
 %changelog
+* Thu Jun 16 2022 Simone Caronni <negativo17@gmail.com> - 5.4.3-1
+- Update to 5.4.3.
+
 * Wed Sep 22 2021 Fabio Valentini <decathorpe@gmail.com> - 4.0.2-2
 - Add BR: python3-setuptools to fix build on Fedora 35+.
 
